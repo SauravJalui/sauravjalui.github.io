@@ -6,8 +6,6 @@ title: Resume
 
 Engineer-turned-Product Manager with 3 years of PM experience (APM → Senior TPM) and a computer science background. Currently lead product on a multi-sided EdTech platform serving 1,300+ daily active users and supporting ₹12 Cr+ in annual course revenue, with a focus on platform extensibility, workflow systems, and 0-to-1 development.
 
-## Experience
-
 <h2>Experience</h2>
 
 <div class="cv-timeline">
