@@ -634,3 +634,16 @@ h1.hx\:bg-clip-text {
   --primary-saturation: 68%;
   --primary-lightness: 66%;
 }
+
+/* Pin the exact rose on the interactive shades Hextra derives with its
+   lightness formula, so the button is #e05a6b, not a washed-out tint. */
+:root {
+  --hx-color-primary-600: #e05a6b;
+  --hx-color-primary-700: #cf4459;
+  --hx-color-primary-500: #e87082;
+}
+.dark {
+  --hx-color-primary-600: #e86b7c;
+  --hx-color-primary-700: #e05a6b;
+  --hx-color-primary-500: #ef8391;
+}
