@@ -1,5 +1,5 @@
 ---
-title: Saurav Jalui
+title: Bento Preview
 layout: hextra-home
 ---
 
@@ -33,8 +33,8 @@ Hi, I'm Saurav 🪷 building things, breaking things, writing it down.-->
 
 <div class="hx:mt-6"></div>
 
-{{< hextra/feature-grid >}}
-{{< hextra/feature-card link="/blog" class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]" image="images/card-blog.webp" imageClass="hx:top-[40%] hx:left-[24px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80" title="Blog" subtitle="Notes on product management, platform design, and build logs — starting with how this site moved from Hashnode to Hugo." style="background: radial-gradient(ellipse at 50% 80%,rgba(194,97,254,0.15),hsla(0,0%,100%,0));" >}}
-{{< hextra/feature-card link="/about" class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-lg:min-h-[340px]" image="images/card-about.webp" imageClass="hx:top-[40%] hx:left-[36px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80" title="About" subtitle="The longer arc: business ops → freelance web dev → content → product. And what I'm building now." style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));" >}}
-{{< hextra/feature-card link="/resume" class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]" image="images/card-resume.webp" imageClass="hx:top-[40%] hx:left-[36px] hx:w-[110%] hx:sm:w-[110%] hx:dark:opacity-80" title="Resume" subtitle="Three years of product work on one page — read it here or grab the PDF." style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));" >}}
+{{< hextra/feature-grid cols="3" >}}
+{{< hextra/feature-card link="/blog" class="hx:md:col-span-2 hx:aspect-auto hx:md:aspect-[2.3/1] hx:max-md:min-h-[300px]" image="images/card-blog.webp" imageClass="hx:top-[40%] hx:left-[24px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80" title="Blog" subtitle="Notes on product management, platform design, and build logs — starting with how this site moved from Hashnode to Hugo." style="background: radial-gradient(ellipse at 50% 80%,rgba(194,97,254,0.15),hsla(0,0%,100%,0));" >}}
+{{< hextra/feature-card link="/about" class="hx:md:col-span-1 hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-lg:min-h-[300px]" image="images/card-about.webp" imageClass="hx:top-[40%] hx:left-[36px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80" title="About" subtitle="The longer arc: business ops → freelance web dev → content → product. And what I'm building now." style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));" >}}
+{{< hextra/feature-card link="/resume" class="hx:md:col-span-3 hx:aspect-auto hx:md:aspect-[3.4/1] hx:max-md:min-h-[240px]" image="images/card-resume.webp" imageClass="hx:top-[40%] hx:left-[36px] hx:w-[110%] hx:sm:w-[110%] hx:dark:opacity-80" title="Resume" subtitle="Three years of product work on one page — read it here or grab the PDF." style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));" >}}
 {{< /hextra/feature-grid >}}

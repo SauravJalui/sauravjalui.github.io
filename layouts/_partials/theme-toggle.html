@@ -1,0 +1,37 @@
+{{- /* Site override of Hextra's theme toggle:
+       a two-state light/dark pill — the system option is removed.
+       Speaks the same protocol as assets/js/head/theme.js
+       (localStorage "color-theme" + light/dark class + colorScheme). */ -}}
+{{- $iconHeight := .iconHeight | default 14 -}}
+
+<div class="theme-pill" role="radiogroup" aria-label="Theme">
+  <button type="button" data-set-theme="light" role="radio" aria-label="Light theme" title="Light">
+    {{- partial "utils/icon.html" (dict "name" "sun" "attributes" (printf "height=%v" $iconHeight)) -}}
+  </button>
+  <button type="button" data-set-theme="dark" role="radio" aria-label="Dark theme" title="Dark">
+    {{- partial "utils/icon.html" (dict "name" "moon" "attributes" (printf "height=%v" $iconHeight)) -}}
+  </button>
+</div>
+<script>
+  (function () {
+    var pill = document.currentScript.previousElementSibling;
+    function apply(theme, persist) {
+      document.documentElement.classList.remove("light", "dark");
+      document.documentElement.classList.add(theme);
+      document.documentElement.style.colorScheme = theme;
+      pill.querySelectorAll("button").forEach(function (b) {
+        var on = b.dataset.setTheme === theme;
+        b.classList.toggle("active", on);
+        b.setAttribute("aria-checked", on ? "true" : "false");
+      });
+      if (persist) { try { localStorage.setItem("color-theme", theme); } catch (e) {} }
+    }
+    pill.querySelectorAll("button").forEach(function (b) {
+      b.addEventListener("click", function () { apply(b.dataset.setTheme, true); });
+    });
+    var t = null;
+    try { t = localStorage.getItem("color-theme"); } catch (e) {}
+    if (t !== "dark") { t = "light"; }  /* "system" or anything else collapses to light */
+    apply(t, true);
+  })();
+</script>
