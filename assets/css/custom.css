@@ -626,22 +626,17 @@ h1.hx\:bg-clip-text {
 }
 
 /* ============================================================
-   Primary accent = lotus pink #fd9598  (HSL 358, 96%, 79%)
-   Button gets dark rose text since the pink is light.
+   Primary accent = lotus rose #e05a6b (HSL 352, 68%, 62%)
+   Button uses white text (large-text contrast passes).
    ============================================================ */
 :root {
-  --primary-hue: 358;
-  --primary-saturation: 96%;
-  --primary-lightness: 79%;
+  --primary-hue: 352;
+  --primary-saturation: 68%;
+  --primary-lightness: 58%;
 }
 
 .dark {
-  --primary-hue: 358;
-  --primary-saturation: 90%;
-  --primary-lightness: 76%;
-}
-
-/* dark, readable text on the light-pink hero button */
-a.hx\:bg-primary-600 {
-  color: #7a2230 !important;
+  --primary-hue: 352;
+  --primary-saturation: 68%;
+  --primary-lightness: 64%;
 }
