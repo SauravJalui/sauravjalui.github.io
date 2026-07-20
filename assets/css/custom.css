@@ -478,12 +478,11 @@ h1.hx\:bg-clip-text {
   top: 6px;
   bottom: 6px;
   width: 2px;
-  background: rgb(226 232 240);
-  /* slate-200 */
+  background: rgba(224, 90, 107, 0.35);
 }
 
 .dark .cv-timeline::before {
-  background: rgb(51 65 85);
+  background: rgba(224, 90, 107, 0.4);
 }
 
 /* slate-700 */
@@ -504,14 +503,13 @@ h1.hx\:bg-clip-text {
   width: 12px;
   height: 12px;
   border-radius: 9999px;
-  background: rgb(148 163 184);
-  /* slate-400 */
-  box-shadow: 0 0 0 3px rgb(255 255 255), 0 0 0 4px rgb(203 213 225);
+  background: #e05a6b;
+  box-shadow: 0 0 0 3px #fdfbf7, 0 0 0 4px rgba(224, 90, 107, 0.4);
 }
 
 .dark .cv-dot {
-  background: rgb(100 116 139);
-  box-shadow: 0 0 0 3px rgb(15 23 42), 0 0 0 4px rgb(51 65 85);
+  background: #e05a6b;
+  box-shadow: 0 0 0 3px #1a1a1e, 0 0 0 4px rgba(224, 90, 107, 0.45);
 }
 
 .cv-dates {
@@ -611,7 +609,7 @@ h1.hx\:bg-clip-text {
   content: "—";
   position: absolute;
   left: 0;
-  color: rgb(148 163 184);
+  color: #e05a6b;
   /* slate-400 */
 }
 
