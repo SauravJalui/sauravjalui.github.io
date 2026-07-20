@@ -647,3 +647,29 @@ h1.hx\:bg-clip-text {
   --hx-color-primary-700: #e05a6b;
   --hx-color-primary-500: #ef8391;
 }
+
+/* ============================================================
+   Warm palette: rose primary + cream background + wine accents
+   ============================================================ */
+:root {
+  /* barely-there warm cream instead of pure white (light mode only) */
+  --hx-color-white: #fdfbf7;
+}
+/* wine (#8a2846) as a deeper-rose accent for headings on prose pages */
+.content h1, .content h2 {
+  color: #8a2846;
+}
+/* rose stays the link color, but give links a wine hover for warmth */
+.content a:hover {
+  color: #8a2846;
+}
+/* Featured Projects: use wine for the eyebrow, rose stays on the numbers */
+.fp-eyebrow { color: #8a2846; }
+
+
+.dark {
+  --hx-color-white: #1a1a1e;
+}
+.dark .content h1, .dark .content h2 { color: inherit; }
+.dark .content a:hover { color: #f0a0b0; }
+.dark .fp-eyebrow { color: #f0a0b0; }
