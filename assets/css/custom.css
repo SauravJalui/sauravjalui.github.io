@@ -401,6 +401,7 @@ h1.hx\:bg-clip-text {
     grid-column: span 1 / span 1;
   }
 }
+
 /* ---- Blog category filter ---- */
 .blog-filter {
   display: flex;
@@ -409,6 +410,7 @@ h1.hx\:bg-clip-text {
   gap: 0.5rem;
   margin: 1.5rem 0 2.5rem;
 }
+
 .blog-filter-btn {
   appearance: none;
   -webkit-appearance: none;
@@ -424,40 +426,51 @@ h1.hx\:bg-clip-text {
   cursor: pointer;
   transition: background-color .15s ease, color .15s ease, border-color .15s ease;
 }
+
 .blog-filter-btn:hover {
   background-color: rgb(241 245 249);
   color: rgb(15 23 42);
 }
+
 .blog-filter-btn.is-active {
   background-color: rgb(15 23 42);
   border-color: rgb(15 23 42);
   color: rgb(248 250 252);
 }
+
 .blog-filter-btn:focus-visible {
   outline: 2px solid rgb(100 116 139);
   outline-offset: 2px;
 }
+
 .dark .blog-filter-btn {
   border-color: rgb(51 65 85);
   background-color: rgb(30 41 59);
   color: rgb(148 163 184);
 }
+
 .dark .blog-filter-btn:hover {
   background-color: rgb(51 65 85);
   color: rgb(241 245 249);
 }
+
 .dark .blog-filter-btn.is-active {
   background-color: rgb(241 245 249);
   border-color: rgb(241 245 249);
   color: rgb(15 23 42);
 }
-.blog-card.is-hidden { display: none; }
+
+.blog-card.is-hidden {
+  display: none;
+}
+
 /* ---- Resume timeline ---- */
 .cv-timeline {
   position: relative;
   margin: 2rem 0 3rem;
   padding-left: 2.25rem;
 }
+
 .cv-timeline::before {
   content: "";
   position: absolute;
@@ -465,12 +478,24 @@ h1.hx\:bg-clip-text {
   top: 6px;
   bottom: 6px;
   width: 2px;
-  background: rgb(226 232 240);           /* slate-200 */
+  background: rgb(226 232 240);
+  /* slate-200 */
 }
-.dark .cv-timeline::before { background: rgb(51 65 85); }  /* slate-700 */
 
-.cv-entry { position: relative; padding-bottom: 3rem; }
-.cv-entry:last-child { padding-bottom: 0.5rem; }
+.dark .cv-timeline::before {
+  background: rgb(51 65 85);
+}
+
+/* slate-700 */
+
+.cv-entry {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.cv-entry:last-child {
+  padding-bottom: 0.5rem;
+}
 
 .cv-dot {
   position: absolute;
@@ -479,9 +504,11 @@ h1.hx\:bg-clip-text {
   width: 12px;
   height: 12px;
   border-radius: 9999px;
-  background: rgb(148 163 184);           /* slate-400 */
+  background: rgb(148 163 184);
+  /* slate-400 */
   box-shadow: 0 0 0 3px rgb(255 255 255), 0 0 0 4px rgb(203 213 225);
 }
+
 .dark .cv-dot {
   background: rgb(100 116 139);
   box-shadow: 0 0 0 3px rgb(15 23 42), 0 0 0 4px rgb(51 65 85);
@@ -491,32 +518,46 @@ h1.hx\:bg-clip-text {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  color: rgb(100 116 139);                /* slate-500 */
+  color: rgb(100 116 139);
+  /* slate-500 */
   margin: 0 0 0.4rem;
 }
-.dark .cv-dates { color: rgb(148 163 184); }
+
+.dark .cv-dates {
+  color: rgb(148 163 184);
+}
 
 .cv-company {
   font-size: 1.3rem;
   font-weight: 700;
-  color: rgb(15 23 42);                   /* slate-900 */
+  color: rgb(15 23 42);
+  /* slate-900 */
   margin: 0 0 0.15rem;
   line-height: 1.3;
 }
-.dark .cv-company { color: rgb(241 245 249); }
+
+.dark .cv-company {
+  color: rgb(241 245 249);
+}
+
 .cv-company-note {
   font-size: 0.95rem;
   font-weight: 400;
-  color: rgb(148 163 184);                /* slate-400 */
+  color: rgb(148 163 184);
+  /* slate-400 */
 }
 
 .cv-role {
   font-size: 1rem;
   font-weight: 500;
-  color: rgb(51 65 85);                   /* slate-700 */
+  color: rgb(51 65 85);
+  /* slate-700 */
   margin: 0 0 0.7rem;
 }
-.dark .cv-role { color: rgb(203 213 225); }
+
+.dark .cv-role {
+  color: rgb(203 213 225);
+}
 
 .cv-pill {
   display: inline-block;
@@ -524,11 +565,15 @@ h1.hx\:bg-clip-text {
   font-weight: 600;
   padding: 0.3rem 0.85rem;
   border-radius: 9999px;
-  background: rgb(239 246 255);           /* blue-50 */
-  color: rgb(29 78 216);                  /* blue-700 */
-  border: 1px solid rgb(191 219 254);     /* blue-200 */
+  background: rgb(239 246 255);
+  /* blue-50 */
+  color: rgb(29 78 216);
+  /* blue-700 */
+  border: 1px solid rgb(191 219 254);
+  /* blue-200 */
   margin: 0 0 0.9rem;
 }
+
 .dark .cv-pill {
   background: rgba(59, 130, 246, 0.15);
   color: rgb(147 197 253);
@@ -536,28 +581,55 @@ h1.hx\:bg-clip-text {
 }
 
 .cv-lead {
-  color: rgb(71 85 105);                  /* slate-600 */
+  color: rgb(71 85 105);
+  /* slate-600 */
   margin: 0.2rem 0 0.8rem;
   line-height: 1.65;
 }
-.dark .cv-lead { color: rgb(148 163 184); }
+
+.dark .cv-lead {
+  color: rgb(148 163 184);
+}
 
 .cv-points {
   list-style: none;
   padding: 0;
   margin: 0.4rem 0 0;
 }
+
 .cv-points li {
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.65rem;
-  color: rgb(51 65 85);                   /* slate-700 */
+  color: rgb(51 65 85);
+  /* slate-700 */
   line-height: 1.65;
 }
-.dark .cv-points li { color: rgb(203 213 225); }
+
+.dark .cv-points li {
+  color: rgb(203 213 225);
+}
+
 .cv-points li::before {
   content: "—";
   position: absolute;
   left: 0;
-  color: rgb(148 163 184);                /* slate-400 */
+  color: rgb(148 163 184);
+  /* slate-400 */
+}
+
+/* ============================================================
+   Recolor the theme's primary accent to lotus rose
+   (button, links, focus rings — all derive from these vars)
+   ============================================================ */
+:root {
+  --primary-hue: 351;
+  --primary-saturation: 82%;
+  --primary-lightness: 56%;
+}
+
+.dark {
+  --primary-hue: 351;
+  --primary-saturation: 78%;
+  --primary-lightness: 62%;
 }
