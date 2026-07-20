@@ -618,25 +618,19 @@ h1.hx\:bg-clip-text {
   /* slate-400 */
 }
 
-
-.dark {
-  --primary-hue: 351;
-  --primary-saturation: 78%;
-  --primary-lightness: 62%;
-}
-
 /* ============================================================
    Primary accent = lotus rose #e05a6b (HSL 352, 68%, 62%)
-   Button uses white text (large-text contrast passes).
+   Button uses white text. Single source of truth — do not
+   add other --primary-hue blocks above this one.
    ============================================================ */
 :root {
   --primary-hue: 352;
   --primary-saturation: 68%;
-  --primary-lightness: 58%;
+  --primary-lightness: 62%;
 }
 
 .dark {
   --primary-hue: 352;
   --primary-saturation: 68%;
-  --primary-lightness: 64%;
+  --primary-lightness: 66%;
 }

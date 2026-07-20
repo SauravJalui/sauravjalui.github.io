@@ -38,3 +38,46 @@ Hi, I'm Saurav 🪷 building things, breaking things, writing it down.-->
 {{< hextra/feature-card link="/about" class="hx:md:col-span-1 hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-lg:min-h-[300px]" image="images/card-about.webp" imageClass="hx:top-[40%] hx:left-[36px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80" title="About" subtitle="The longer arc: business ops → freelance web dev → content → product. And what I'm building now." style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));" >}}
 {{< hextra/feature-card link="/resume" class="hx:md:col-span-3 hx:aspect-auto hx:md:aspect-[3.4/1] hx:max-md:min-h-[240px]" image="images/card-resume.webp" imageClass="hx:top-[40%] hx:left-[36px] hx:w-[110%] hx:sm:w-[110%] hx:dark:opacity-80" title="Resume" subtitle="Three years of product work on one page — read it here or grab the PDF." style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));" >}}
 {{< /hextra/feature-grid >}}
+
+<div class="featured-projects">
+<p class="fp-eyebrow">Featured projects</p>
+<h2 class="fp-title">Work I'm proud of.</h2>
+
+<article class="fp-card fp-wide">
+  <span class="fp-tag">AP GURU · EDTECH PLATFORM</span>
+  <h3 class="fp-card-title">Getting a company off Excel — without a revolt</h3>
+  <p class="fp-summary">A five-year sprawl of scheduling spreadsheets had stopped scaling. I led the team-by-team migration to a permissioned portal, running both systems in parallel until each team stopped reaching for the sheet on its own.</p>
+  <a class="fp-link" href="/blog/excel-to-portal/">Read the full case study →</a>
+  <div class="fp-stats">
+    <div class="fp-stat"><span class="fp-num">100%</span><span class="fp-label">off Excel, org-wide</span></div>
+    <div class="fp-stat"><span class="fp-num">300+</span><span class="fp-label">staff migrated</span></div>
+    <div class="fp-stat"><span class="fp-num">team-by-team</span><span class="fp-label">zero-downtime rollout</span></div>
+  </div>
+</article>
+
+<div class="fp-row">
+<article class="fp-card">
+  <span class="fp-tag">AP GURU · PLATFORM</span>
+  <h3 class="fp-card-title">The tool was faster. They still wanted the spreadsheet back.</h3>
+  <p class="fp-summary">A scheduling portal that was objectively better kept getting rejected. I reframed adoption as a trust problem, named the real user, and built an honest way to measure whether people would leave if they could.</p>
+  <div class="fp-chips"><span>Product strategy</span><span>Internal tools</span><span>Change management</span></div>
+  <div class="fp-stats">
+    <div class="fp-stat"><span class="fp-num">1,300+</span><span class="fp-label">daily users</span></div>
+    <div class="fp-stat"><span class="fp-num">₹12 Cr+</span><span class="fp-label">annual revenue</span></div>
+    <div class="fp-stat"><span class="fp-num">15</span><span class="fp-label">person team</span></div>
+  </div>
+</article>
+
+<article class="fp-card">
+  <span class="fp-tag">AP GURU · DATA MODEL</span>
+  <h3 class="fp-card-title">One platform, every exam type</h3>
+  <p class="fp-summary">Redesigned the core test data model into a flexible schema that could score everything from SAT to IB — turning a two-course tool into a catalog spanning ten-plus exam types.</p>
+  <div class="fp-chips"><span>System design</span><span>Data modeling</span><span>0-to-1</span></div>
+  <div class="fp-stats">
+    <div class="fp-stat"><span class="fp-num">~150x</span><span class="fp-label">catalog growth</span></div>
+    <div class="fp-stat"><span class="fp-num">300+</span><span class="fp-label">courses</span></div>
+    <div class="fp-stat"><span class="fp-num">10+</span><span class="fp-label">exam types</span></div>
+  </div>
+</article>
+</div>
+</div>
