@@ -618,18 +618,30 @@ h1.hx\:bg-clip-text {
   /* slate-400 */
 }
 
-/* ============================================================
-   Recolor the theme's primary accent to lotus rose
-   (button, links, focus rings — all derive from these vars)
-   ============================================================ */
-:root {
-  --primary-hue: 351;
-  --primary-saturation: 82%;
-  --primary-lightness: 56%;
-}
 
 .dark {
   --primary-hue: 351;
   --primary-saturation: 78%;
   --primary-lightness: 62%;
+}
+
+/* ============================================================
+   Primary accent = lotus pink #fd9598  (HSL 358, 96%, 79%)
+   Button gets dark rose text since the pink is light.
+   ============================================================ */
+:root {
+  --primary-hue: 358;
+  --primary-saturation: 96%;
+  --primary-lightness: 79%;
+}
+
+.dark {
+  --primary-hue: 358;
+  --primary-saturation: 90%;
+  --primary-lightness: 76%;
+}
+
+/* dark, readable text on the light-pink hero button */
+a.hx\:bg-primary-600 {
+  color: #7a2230 !important;
 }
