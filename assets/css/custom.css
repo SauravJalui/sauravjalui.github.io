@@ -452,3 +452,112 @@ h1.hx\:bg-clip-text {
   color: rgb(15 23 42);
 }
 .blog-card.is-hidden { display: none; }
+/* ---- Resume timeline ---- */
+.cv-timeline {
+  position: relative;
+  margin: 2rem 0 3rem;
+  padding-left: 2.25rem;
+}
+.cv-timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: rgb(226 232 240);           /* slate-200 */
+}
+.dark .cv-timeline::before { background: rgb(51 65 85); }  /* slate-700 */
+
+.cv-entry { position: relative; padding-bottom: 3rem; }
+.cv-entry:last-child { padding-bottom: 0.5rem; }
+
+.cv-dot {
+  position: absolute;
+  left: calc(-2.25rem);
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: rgb(148 163 184);           /* slate-400 */
+  box-shadow: 0 0 0 3px rgb(255 255 255), 0 0 0 4px rgb(203 213 225);
+}
+.dark .cv-dot {
+  background: rgb(100 116 139);
+  box-shadow: 0 0 0 3px rgb(15 23 42), 0 0 0 4px rgb(51 65 85);
+}
+
+.cv-dates {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgb(100 116 139);                /* slate-500 */
+  margin: 0 0 0.4rem;
+}
+.dark .cv-dates { color: rgb(148 163 184); }
+
+.cv-company {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(15 23 42);                   /* slate-900 */
+  margin: 0 0 0.15rem;
+  line-height: 1.3;
+}
+.dark .cv-company { color: rgb(241 245 249); }
+.cv-company-note {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgb(148 163 184);                /* slate-400 */
+}
+
+.cv-role {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(51 65 85);                   /* slate-700 */
+  margin: 0 0 0.7rem;
+}
+.dark .cv-role { color: rgb(203 213 225); }
+
+.cv-pill {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  background: rgb(239 246 255);           /* blue-50 */
+  color: rgb(29 78 216);                  /* blue-700 */
+  border: 1px solid rgb(191 219 254);     /* blue-200 */
+  margin: 0 0 0.9rem;
+}
+.dark .cv-pill {
+  background: rgba(59, 130, 246, 0.15);
+  color: rgb(147 197 253);
+  border-color: rgb(30 64 175);
+}
+
+.cv-lead {
+  color: rgb(71 85 105);                  /* slate-600 */
+  margin: 0.2rem 0 0.8rem;
+  line-height: 1.65;
+}
+.dark .cv-lead { color: rgb(148 163 184); }
+
+.cv-points {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+}
+.cv-points li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.65rem;
+  color: rgb(51 65 85);                   /* slate-700 */
+  line-height: 1.65;
+}
+.dark .cv-points li { color: rgb(203 213 225); }
+.cv-points li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: rgb(148 163 184);                /* slate-400 */
+}
