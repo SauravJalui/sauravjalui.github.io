@@ -11,7 +11,14 @@
    1. DESIGN TOKENS
    ============================================================================= */
 :root {
-  /* Brand palette */          /* primary: buttons, links, focus, accents (violet) */          /* primary: buttons, links, focus, accents */          /* deeper accent: headings, timeline, pills, dashes (plum) */          /* deeper accent: headings, timeline, pills, dashes */    /* plum for dark backgrounds */    /* wine for dark backgrounds */     /* readable accent on dark backgrounds */     /* readable accent on dark backgrounds */          /* barely-cool off-white, pairs with violet */         /* warm off-white page background (light mode) */
+  /* Brand palette */
+  --rose: #7b52d4;          /* primary: buttons, links, focus, accents (violet) */          /* primary: buttons, links, focus, accents */
+  --rose-hover: #6a3ce0;
+  --rose-light: #8f6ae0;
+  --wine: #5b3aa8;          /* deeper accent: headings, timeline, pills, dashes (deep violet) */          /* deeper accent: headings, timeline, pills, dashes */
+  --wine-light: #7b52d4;    /* wine for dark backgrounds */
+  --pink-soft: #c9b3f0;     /* readable accent on dark backgrounds */     /* readable accent on dark backgrounds */
+  --cream: #fbf9fd;          /* barely-cool off-white, pairs with violet */         /* warm off-white page background (light mode) */
   --ink: #1a1a1e;           /* page background (dark mode) */
   --live-green: #22c55e;    /* "open to work" status dot */
 
@@ -25,9 +32,15 @@
   --hx-color-white: var(--cream);
 
   /* Accent hue drives Hextra's link/focus palette */
+  --primary-hue: 262;
+  --primary-saturation: 60%;
+  --primary-lightness: 58%;
 
   /* Pin exact rose on the interactive shades — Hextra otherwise runs lightness
      through hsl(h, s, (l/50)*45) and the button renders washed-out. */
+  --hx-color-primary-600: var(--rose);
+  --hx-color-primary-700: var(--rose-hover);
+  --hx-color-primary-500: var(--rose-light);
 
   /* Site shell width (narrowed from Hextra's 80rem default) */
   --hextra-max-page-width: 72rem;
@@ -35,85 +48,14 @@
   --hextra-max-footer-width: 72rem;
 }
 
-/* =============================================================================
-   COLOR THEMES — visitor-selectable via data-color on <html>
-   (switcher partial writes data-color + localStorage "color-palette")
-   ============================================================================= */
-[data-color="rose"] {
-  --rose: #e05a6b;
-  --rose-hover: #cf4459;
-  --rose-light: #e87082;
-  --wine: #8a2846;
-  --wine-light: #a83355;
-  --pink-soft: #f0a0b0;
-  --cream: #fdfbf7;
-  --primary-hue: 352; --primary-saturation: 68%; --primary-lightness: 62%;
-  --hx-color-primary-600: #e05a6b;
-  --hx-color-primary-700: #cf4459;
-  --hx-color-primary-500: #e87082;
-}
-[data-color="rose"].dark, .dark[data-color="rose"] {
-  --primary-hue: 352; --primary-saturation: 68%; --primary-lightness: 66%;
-  --hx-color-primary-600: #e86b7c;
-  --hx-color-primary-700: #e05a6b;
-  --hx-color-primary-500: #ef8391;
-}
-[data-color="violet"] {
-  --rose: #7b52d4;
-  --rose-hover: #6a3ce0;
-  --rose-light: #8f6ae0;
-  --wine: #4a2d7a;
-  --wine-light: #6a4bb0;
-  --pink-soft: #c9b3f0;
-  --cream: #fbf9fd;
-  --primary-hue: 262; --primary-saturation: 60%; --primary-lightness: 58%;
-  --hx-color-primary-600: #7b52d4;
-  --hx-color-primary-700: #6a3ce0;
-  --hx-color-primary-500: #8f6ae0;
-}
-[data-color="violet"].dark, .dark[data-color="violet"] {
-  --primary-hue: 262; --primary-saturation: 60%; --primary-lightness: 64%;
-  --hx-color-primary-600: #8f6ae0;
-  --hx-color-primary-700: #7b52d4;
-  --hx-color-primary-500: #a385e8;
-}
-/* fallback if JS hasn't set data-color yet: use violet */
-:root:not([data-color]) {
-  --rose: #7b52d4; --rose-hover: #6a3ce0; --rose-light: #8f6ae0;
-  --wine: #4a2d7a; --wine-light: #6a4bb0; --pink-soft: #c9b3f0; --cream: #fbf9fd;
-  --primary-hue: 262; --primary-saturation: 60%; --primary-lightness: 58%;
-  --hx-color-primary-600: #7b52d4; --hx-color-primary-700: #6a3ce0; --hx-color-primary-500: #8f6ae0;
-}
-
-/* ---- Color switcher dots (navbar) ---- */
-.color-pill {
-  display: inline-flex; align-items: center; gap: 4px;
-  padding: 3px; margin: 0 0.25rem;
-  border: 1px solid rgba(0,0,0,.15); border-radius: 9999px;
-}
-.dark .color-pill { border-color: rgba(255,255,255,.2); }
-.color-pill button {
-  display: flex; align-items: center; justify-content: center;
-  width: 24px; height: 24px; padding: 0;
-  border: 0; border-radius: 9999px; background: transparent;
-  cursor: pointer; opacity: .5; transition: opacity .15s, transform .1s;
-}
-.color-pill button:hover { opacity: .85; }
-.color-pill button.active { opacity: 1; }
-.color-pill button.active .color-dot { box-shadow: 0 0 0 2px var(--cream), 0 0 0 3.5px currentColor; }
-.color-dot { width: 14px; height: 14px; border-radius: 9999px; display: block; }
-.color-dot-rose { background: #e05a6b; }
-.color-dot-violet { background: #7b52d4; }
-
-/* ---- Lotus logo + headline swap by theme ---- */
-[data-color="rose"] .hextra-logo img,
-[data-color="rose"] img[src*="lotus"] { content: url("/images/lotus-rose.svg"); }
-[data-color="violet"] .hextra-logo img,
-[data-color="violet"] img[src*="lotus"] { content: url("/images/lotus-violet.svg"); }
-
-
 .dark {
   --hx-color-white: var(--ink);
+  --primary-hue: 262;
+  --primary-saturation: 60%;
+  --primary-lightness: 64%;
+  --hx-color-primary-600: #8f6ae0;
+  --hx-color-primary-700: var(--rose);
+  --hx-color-primary-500: #a385e8;
 }
 
 
@@ -362,24 +304,3 @@ h1.hx\:bg-clip-text {
 .fp-stat { display: flex; flex-direction: column; }
 .fp-num { font-size: 1.9rem; font-weight: 700; line-height: 1; color: var(--rose); }
 .fp-label { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; opacity: .6; margin-top: .35rem; }
-
-
-/* =============================================================================
-   7. WIDE FEATURED CARD — screenshot on the right (smaller, right-aligned)
-   ============================================================= */
-.fp-has-media { display: grid; grid-template-columns: 1.7fr 1fr; gap: 2rem; align-items: center; }
-.fp-wide-media { text-align: right; }
-.fp-wide-media img {
-  width: 100%; max-width: 260px; border-radius: 12px;
-  border: 1px solid rgba(0,0,0,.10);
-  box-shadow: 0 8px 24px rgba(74,45,122,.12);
-}
-.dark .fp-wide-media img { border-color: rgba(255,255,255,.12); }
-@media (max-width: 60rem) {
-  .fp-has-media { grid-template-columns: 1fr; gap: 1.25rem; }
-  .fp-wide-media { text-align: center; }
-  .fp-wide-media img { max-width: 100%; }
-}
-
-.dark 
-.switcher-group { display: inline-flex; align-items: center; gap: 6px; }

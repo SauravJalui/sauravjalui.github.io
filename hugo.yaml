@@ -49,8 +49,8 @@ params:
     displayTitle: true
     displayLogo: true
     logo:
-      path: images/lotus.svg
-      dark: images/lotus.svg
+      path: images/lotus-violet.svg
+      dark: images/lotus-violet.svg
       width: 28
       height: 28
 

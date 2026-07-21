@@ -1,37 +1,75 @@
-{{- /* Site override of Hextra's theme toggle:
-       a two-state light/dark pill — the system option is removed.
-       Speaks the same protocol as assets/js/head/theme.js
-       (localStorage "color-theme" + light/dark class + colorScheme). */ -}}
+{{- /* Site override: light/dark pill + rose/violet color dots, side by side.
+       - light/dark: localStorage "color-theme", toggles light/dark class (Hextra protocol)
+       - rose/violet: localStorage "color-palette", sets data-color on <html>
+       First-time color is random; both persist after a click. */ -}}
 {{- $iconHeight := .iconHeight | default 14 -}}
 
-<div class="theme-pill" role="radiogroup" aria-label="Theme">
-  <button type="button" data-set-theme="light" role="radio" aria-label="Light theme" title="Light">
-    {{- partial "utils/icon.html" (dict "name" "sun" "attributes" (printf "height=%v" $iconHeight)) -}}
-  </button>
-  <button type="button" data-set-theme="dark" role="radio" aria-label="Dark theme" title="Dark">
-    {{- partial "utils/icon.html" (dict "name" "moon" "attributes" (printf "height=%v" $iconHeight)) -}}
-  </button>
+<div class="switcher-group">
+  <div class="theme-pill" role="radiogroup" aria-label="Light or dark theme">
+    <button type="button" data-set-theme="light" role="radio" aria-label="Light theme" title="Light">
+      {{- partial "utils/icon.html" (dict "name" "sun" "attributes" (printf "height=%v" $iconHeight)) -}}
+    </button>
+    <button type="button" data-set-theme="dark" role="radio" aria-label="Dark theme" title="Dark">
+      {{- partial "utils/icon.html" (dict "name" "moon" "attributes" (printf "height=%v" $iconHeight)) -}}
+    </button>
+  </div>
+
+  <div class="color-pill" role="radiogroup" aria-label="Accent color">
+    <button type="button" data-set-color="rose" role="radio" aria-label="Rose theme" title="Rose">
+      <span class="color-dot color-dot-rose"></span>
+    </button>
+    <button type="button" data-set-color="violet" role="radio" aria-label="Violet theme" title="Violet">
+      <span class="color-dot color-dot-violet"></span>
+    </button>
+  </div>
 </div>
+
 <script>
   (function () {
-    var pill = document.currentScript.previousElementSibling;
-    function apply(theme, persist) {
+    var group = document.currentScript.previousElementSibling;
+    var lightPill = group.querySelector(".theme-pill");
+    var colorPill = group.querySelector(".color-pill");
+
+    function applyTheme(theme, persist) {
       document.documentElement.classList.remove("light", "dark");
       document.documentElement.classList.add(theme);
       document.documentElement.style.colorScheme = theme;
-      pill.querySelectorAll("button").forEach(function (b) {
+      lightPill.querySelectorAll("button").forEach(function (b) {
         var on = b.dataset.setTheme === theme;
         b.classList.toggle("active", on);
         b.setAttribute("aria-checked", on ? "true" : "false");
       });
       if (persist) { try { localStorage.setItem("color-theme", theme); } catch (e) {} }
     }
-    pill.querySelectorAll("button").forEach(function (b) {
-      b.addEventListener("click", function () { apply(b.dataset.setTheme, true); });
+    function applyColor(color, persist) {
+      document.documentElement.setAttribute("data-color", color);
+      colorPill.querySelectorAll("button").forEach(function (b) {
+        var on = b.dataset.setColor === color;
+        b.classList.toggle("active", on);
+        b.setAttribute("aria-checked", on ? "true" : "false");
+      });
+      if (persist) { try { localStorage.setItem("color-palette", color); } catch (e) {} }
+    }
+
+    lightPill.querySelectorAll("button").forEach(function (b) {
+      b.addEventListener("click", function () { applyTheme(b.dataset.setTheme, true); });
     });
+    colorPill.querySelectorAll("button").forEach(function (b) {
+      b.addEventListener("click", function () { applyColor(b.dataset.setColor, true); });
+    });
+
+    /* light/dark: honor stored, else system */
     var t = null;
     try { t = localStorage.getItem("color-theme"); } catch (e) {}
-    if (t !== "dark") { t = "light"; }  /* "system" or anything else collapses to light */
-    apply(t, true);
+    if (t !== "light" && t !== "dark") {
+      t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    }
+    applyTheme(t, false);
+
+    /* color: honor stored, else random (first-timer) */
+    var c = null;
+    try { c = localStorage.getItem("color-palette"); } catch (e) {}
+    if (c !== "rose" && c !== "violet") { c = Math.random() < 0.5 ? "rose" : "violet"; }
+    applyColor(c, true);
   })();
 </script>
