@@ -320,3 +320,36 @@ h1.hx\:bg-clip-text {
   .fp-wide-media { text-align: center; }
   .fp-wide-media img { max-width: 100%; }
 }
+
+
+/* =============================================================================
+   8. FOOTER — slim credit line instead of Hextra's full-width grey slab
+   Hextra ships the footer as bg-gray-100 + py-12 (3rem top AND bottom) with a
+   semibold text-sm credit. The theme is a Hugo module, so its utility classes
+   can't be edited — override them here.
+   ============================================================================= */
+footer.hextra-footer {
+  background: transparent;                      /* drop the grey slab */
+  border-top: 1px solid rgba(0, 0, 0, .07);     /* hairline separator instead */
+}
+.dark footer.hextra-footer {
+  background: transparent;
+  border-top-color: rgba(255, 255, 255, .10);
+}
+
+/* Collapse Hextra's py-12 (3rem -> .85rem). The :not() skips the empty
+   .hextra-custom-footer div, which shares the width class and would otherwise
+   add its own padding back as dead space. */
+.hextra-footer .hextra-max-footer-width:not(.hextra-custom-footer) {
+  padding-top: .85rem;
+  padding-bottom: .85rem;
+}
+
+/* Small, quiet credit. The Hextra mark is height:1em, so it shrinks with it. */
+.hextra-footer a {
+  font-size: .72rem;
+  font-weight: 400;
+  opacity: .85;              /* quiet, but still ~4.9:1 contrast (WCAG AA) */
+  transition: opacity .15s;
+}
+.hextra-footer a:hover { opacity: 1; }

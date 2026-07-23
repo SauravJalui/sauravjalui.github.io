@@ -41,6 +41,13 @@ menu:
       params:
         type: theme-toggle
 
+# Google Analytics 4. Hextra emits this only on production builds --
+# components/analytics/analytics.html wraps it in hugo.IsProduction --
+# so `hugo server` locally will not pollute your stats.
+services:
+  googleAnalytics:
+    ID: G-9DCZNJXZKJ
+
 params:
   theme:
     default: light
