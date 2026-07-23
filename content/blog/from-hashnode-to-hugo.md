@@ -11,7 +11,7 @@ tags:
   - Meta
 category: 'Writing'
 images:
-  - /images/post-hashnode.webp
+  - /images/post-hashnode.jpg
 ---
 
 ![From a hosted platform to my own stack](/images/post-hashnode.webp)

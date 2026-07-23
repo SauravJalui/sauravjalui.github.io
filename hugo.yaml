@@ -1,6 +1,9 @@
 # Hugo configuration file
 title: Saurav Jalui
 
+# Generate /robots.txt from layouts/robots.txt (adds the Sitemap: line).
+enableRobotsTXT: true
+
 # import hextra as module
 module:
   imports:
@@ -49,6 +52,12 @@ services:
     ID: G-9DCZNJXZKJ
 
 params:
+  # Site-wide fallback for og:image / twitter:image. Any page with its own
+  # `images:` front matter overrides this; everything else (home, about,
+  # resume, blog index, tag pages) falls back to the card below.
+  images:
+    - images/og-default.png
+
   theme:
     default: light
     displayToggle: false

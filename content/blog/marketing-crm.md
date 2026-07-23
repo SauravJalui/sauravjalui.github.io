@@ -12,7 +12,7 @@ tags:
 category: 'Design Notes'
 excludeSearch: false
 images:
-  - /images/post-crm.webp
+  - /images/post-crm.jpg
 ---
 
 {{< hextra/hero-badge >}}Design Note · Before the Build{{< /hextra/hero-badge >}}

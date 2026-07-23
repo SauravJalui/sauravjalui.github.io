@@ -59,6 +59,7 @@ Hi, I'm Saurav 🪷 building things, breaking things, writing it down.-->
   <span class="fp-tag">AP GURU · PLATFORM</span>
   <h3 class="fp-card-title">The tool was faster. They still wanted the spreadsheet back.</h3>
   <p class="fp-summary">A scheduling portal that was objectively better kept getting rejected. I reframed adoption as a trust problem, named the real user, and built an honest way to measure whether people would leave if they could.</p>
+  <a class="fp-link" href="/blog/scheduling-portal/">Read the full case study →</a>
   <div class="fp-chips"><span>Product strategy</span><span>Internal tools</span><span>Change management</span></div>
   <div class="fp-stats">
     <div class="fp-stat"><span class="fp-num">1,300+</span><span class="fp-label">daily users</span></div>

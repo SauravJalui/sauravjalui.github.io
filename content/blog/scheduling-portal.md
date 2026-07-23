@@ -12,7 +12,7 @@ tags:
 category: 'Case Studies'
 excludeSearch: false
 images:
-  - /images/post-scheduling.webp
+  - /images/post-scheduling.jpg
 ---
 
 We spent a long time building a scheduling portal to kill the spreadsheets it replaced — thousands of students, hundreds of teachers, a shared pool of video links, all of it held together in Sheets and WhatsApp until the whole thing started tearing at the seams. The portal was, by every measure I cared about, better. Booking a year of recurring classes went from copying a weekly sheet dozens of times to a single click.

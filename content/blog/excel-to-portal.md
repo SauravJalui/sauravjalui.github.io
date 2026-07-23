@@ -12,7 +12,7 @@ tags:
 category: 'Case Studies'
 excludeSearch: false
 images:
-  - /images/post-migration.webp
+  - /images/post-migration.jpg
 ---
 
 {{< hextra/hero-badge >}}Case Study · Migration{{< /hextra/hero-badge >}}
