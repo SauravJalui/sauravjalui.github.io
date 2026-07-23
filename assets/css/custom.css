@@ -1,5 +1,5 @@
 /* =============================================================================
-   sauravjalui.com — custom overrides for the Hextra theme
+   sauravjalui.com: custom overrides for the Hextra theme
    Single source of truth. Organized top-to-bottom:
      1. Design tokens (colors, fonts)   4. Layout overrides
      2. Fonts (@font-face)              5. Components (cards, timeline, pills)
@@ -11,7 +11,7 @@
    1. DESIGN TOKENS
    ============================================================================= */
 :root {
-  /* Brand palette — violet + plum (single site palette).
+  /* Brand palette: violet + plum (single site palette).
      NB: token names stayed --rose/--wine from the old rose scheme; their VALUES are violet/plum. */
   --rose:        #7b52d4;   /* primary: buttons, links, focus, stat numbers (violet) */
   --rose-hover:  #6a3ce0;   /* primary hover */
@@ -35,7 +35,7 @@
   /* Accent hue drives Hextra's link/focus palette (violet, HSL 262) */
   --primary-hue: 262; --primary-saturation: 60%; --primary-lightness: 58%;
 
-  /* Pin exact violet on the interactive shades — Hextra otherwise runs lightness
+  /* Pin exact violet on the interactive shades, because Hextra otherwise runs lightness
      through hsl(h, s, (l/50)*45) and the button renders washed-out. */
   --hx-color-primary-600: #7b52d4;
   --hx-color-primary-700: #6a3ce0;
@@ -58,7 +58,7 @@
 
 
 /* =============================================================================
-   2. FONTS — all self-hosted WOFF2 in /static/fonts/
+   2. FONTS: all self-hosted WOFF2 in /static/fonts/
    ============================================================================= */
 @font-face { font-family: "Bricolage Grotesque"; src: url("/fonts/bricolage-grotesque.woff2") format("woff2"); font-weight: 200 800; font-stretch: 75% 100%; font-display: swap; }
 
@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Bricolage Grotesque", var(--hx-font-sans);
 }
 
-/* Navbar wordmark ("Saurav Jalui") — larger, in Bricolage */
+/* Navbar wordmark ("Saurav Jalui"): larger, in Bricolage */
 nav a span.hx\:font-extrabold {
   font-family: "Bricolage Grotesque", var(--hx-font-sans);
   font-size: 1.35rem;
@@ -95,7 +95,7 @@ h1.hx\:bg-clip-text {
   padding-bottom: 0.12em;
 }
 
-/* Inline lotus SVG in the headline — an <img> so bg-clip-text can't repaint it */
+/* Inline lotus SVG in the headline, an <img> so bg-clip-text can't repaint it */
 .headline-lotus {
   display: inline-block;
   height: 0.82em;
@@ -305,7 +305,7 @@ h1.hx\:bg-clip-text {
 
 
 /* =============================================================================
-   7. WIDE FEATURED CARD — screenshot on the right (smaller, right-aligned)
+   7. WIDE FEATURED CARD: screenshot on the right (smaller, right-aligned)
    ============================================================= */
 .fp-has-media { display: grid; grid-template-columns: 1.7fr 1fr; gap: 2rem; align-items: center; }
 .fp-wide-media { text-align: right; }
@@ -323,10 +323,10 @@ h1.hx\:bg-clip-text {
 
 
 /* =============================================================================
-   8. FOOTER — slim credit line instead of Hextra's full-width grey slab
+   8. FOOTER: slim credit line instead of Hextra's full-width grey slab
    Hextra ships the footer as bg-gray-100 + py-12 (3rem top AND bottom) with a
    semibold text-sm credit. The theme is a Hugo module, so its utility classes
-   can't be edited — override them here.
+   can't be edited, so override them here.
    ============================================================================= */
 footer.hextra-footer {
   background: transparent;                      /* drop the grey slab */

@@ -16,7 +16,7 @@ images:
 
 ![From a hosted platform to my own stack](/images/post-hashnode.webp)
 
-This blog has a new home. It used to live on Hashnode; it now runs on [Hugo](https://gohugo.io) with the [Hextra](https://github.com/imfing/hextra) theme, builds on GitHub Actions, and serves for free from GitHub Pages — same domain, same URLs.
+This blog has a new home. It used to live on Hashnode; it now runs on [Hugo](https://gohugo.io) with the [Hextra](https://github.com/imfing/hextra) theme, builds on GitHub Actions, and serves for free from GitHub Pages: same domain, same URLs.
 
 ## Why move
 
@@ -35,7 +35,7 @@ That single line is what preserves years of links and search rankings across the
 
 ## What broke along the way
 
-Almost nothing — except the time I copied a shortcode block from a _rendered_ Markdown view and it silently injected blockquote markers into the file, breaking the build with the world's most cryptic error. Lesson learned: always copy from the raw source.
+Almost nothing, except the time I copied a shortcode block from a _rendered_ Markdown view and it silently injected blockquote markers into the file, breaking the build with the world's most cryptic error. Lesson learned: always copy from the raw source.
 
 ## What's next
 

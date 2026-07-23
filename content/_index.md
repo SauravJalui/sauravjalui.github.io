@@ -40,7 +40,7 @@ Hi, I'm Saurav 🪷 building things, breaking things, writing it down.-->
 <article class="fp-card fp-wide fp-has-media">
 <div class="fp-wide-text">
   <span class="fp-tag">AP GURU · EDTECH PLATFORM</span>
-  <h3 class="fp-card-title">Getting a company off Excel — without a revolt</h3>
+  <h3 class="fp-card-title">Getting a company off Excel without a revolt</h3>
   <p class="fp-summary">A five-year sprawl of scheduling spreadsheets had stopped scaling. I led the team-by-team migration to a permissioned portal, running both systems in parallel until each team stopped reaching for the sheet on its own.</p>
   <a class="fp-link" href="/blog/excel-to-portal/">Read the full case study →</a>
   <div class="fp-stats">
@@ -50,7 +50,7 @@ Hi, I'm Saurav 🪷 building things, breaking things, writing it down.-->
   </div>
 </div>
 <div class="fp-wide-media">
-  <img src="/images/portal-after.webp" alt="The scheduling portal that replaced the spreadsheet — structured classes, teacher availability, and status at a glance (names blurred)." loading="lazy" />
+  <img src="/images/portal-after.webp" alt="The scheduling portal that replaced the spreadsheet: structured classes, teacher availability, and status at a glance (names blurred)." loading="lazy" />
 </div>
 </article>
 
@@ -71,7 +71,7 @@ Hi, I'm Saurav 🪷 building things, breaking things, writing it down.-->
 <article class="fp-card">
   <span class="fp-tag">AP GURU · DATA MODEL</span>
   <h3 class="fp-card-title">One platform, every exam type</h3>
-  <p class="fp-summary">Redesigned the core test data model into a flexible schema that could score everything from SAT to IB — turning a two-course tool into a catalog spanning ten-plus exam types.</p>
+  <p class="fp-summary">Redesigned the core test data model into a flexible schema that could score everything from SAT to IB, turning a two-course tool into a catalog spanning ten-plus exam types.</p>
   <div class="fp-chips"><span>System design</span><span>Data modeling</span><span>0-to-1</span></div>
   <div class="fp-stats">
     <div class="fp-stat"><span class="fp-num">~150x</span><span class="fp-label">catalog growth</span></div>
