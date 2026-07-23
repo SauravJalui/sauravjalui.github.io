@@ -1,5 +1,6 @@
 ---
-title: 'The Tool Was Faster. They Still Wanted the Spreadsheet Back.'
+title: 'The Tool Was Faster. They Still Wanted the Spreadsheet Back.'
+description: 'The scheduling portal was faster and they still wanted the spreadsheet back. Adoption turned out to be a trust problem, not a capability problem.'
 date: 2026-07-18
 authors:
   - name: Saurav Jalui

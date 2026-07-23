@@ -1,5 +1,6 @@
 ---
-title: 'From Hashnode to Hugo: Notes From the Move'
+title: 'From Hashnode to Hugo: Notes From the Move'
+description: 'Why this blog left Hashnode for Hugo and the Hextra theme, building on GitHub Actions and serving free from GitHub Pages on the same domain and URLs.'
 date: 2026-07-19
 authors:
   - name: Saurav Jalui

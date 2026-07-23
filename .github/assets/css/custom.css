@@ -68,6 +68,8 @@
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/Inter-700.woff2") format("woff2"); }
 
 @font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/JetBrainsMono-400.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/JetBrainsMono-500.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/JetBrainsMono-700.woff2") format("woff2"); }
 
 
 /* =============================================================================
@@ -370,23 +372,4 @@ footer.hextra-footer {
 }
 .dark .hx\:h-4.hx\:w-4.hx\:rounded-full {
   box-shadow: 0 0 0 1px rgb(255 255 255 / .14);
-}
-
-/* ================================================================
-   10. CONTENT IMAGES IN DARK MODE
-   Every post header and inline screenshot is a light-background
-   image (mean luminance 210-241/255). Unmodified they read as
-   glaring white slabs against the dark theme. Knocking back
-   brightness and a touch of contrast settles them into the page
-   without touching the source files. Excludes the author avatar
-   and the navbar lotus, which are already small and dark-safe.
-   ================================================================ */
-.dark .content img,
-.dark .fp-shot img {
-  filter: brightness(.86) contrast(1.04);
-  transition: filter .2s ease;
-}
-.dark .content img:hover,
-.dark .fp-shot img:hover {
-  filter: none;                  /* full fidelity when inspected */
 }

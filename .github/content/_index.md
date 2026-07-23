@@ -1,6 +1,5 @@
 ---
 title: Saurav Jalui
-description: 'Developer-turned-product manager in Mumbai, building EdTech platforms at scale. Case studies on internal tools, migrations, and what breaks along the way.'
 layout: hextra-home
 ---
 

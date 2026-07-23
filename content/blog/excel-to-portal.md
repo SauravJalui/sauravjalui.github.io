@@ -1,5 +1,6 @@
 ---
-title: 'Getting a Company Off Excel Without a Revolt'
+title: 'Getting a Company Off Excel Without a Revolt'
+description: 'How we moved an entire company off Excel without a revolt: running the portal and the spreadsheet in parallel, team by team, on their timeline rather than mine.'
 date: 2026-07-12
 authors:
   - name: Saurav Jalui

@@ -1,6 +1,5 @@
 ---
 title: Resume
-description: 'Resume of Saurav Jalui: Senior Technical Product Manager in EdTech, three years of PM experience from APM to Senior TPM, computer science background.'
 ---
 
 {{< hextra/hero-button text="Download PDF ↓" link="/saurav-jalui-resume.pdf" >}}

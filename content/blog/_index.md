@@ -1,5 +1,6 @@
 ---
-title: 'Blog'
+title: 'Blog'
+description: 'Notes on product management, platform design, and build logs. Case studies on internal tools, spreadsheet migrations, and adoption problems in EdTech.'
 ---
 
 <div style="text-align: center; margin-top: 2em;">

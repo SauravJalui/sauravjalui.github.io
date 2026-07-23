@@ -1,6 +1,5 @@
 ---
 title: 'The Most Ambitious Thing I Haven''t Built Yet'
-description: 'A design note on building a marketing CRM inside the platform we already run, and why the feature I care most about is the task queue rather than the pipeline.'
 date: 2026-07-23
 authors:
   - name: Saurav Jalui

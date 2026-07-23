@@ -1,0 +1,79 @@
+# Hugo configuration file
+title: Saurav Jalui
+
+# Generate /robots.txt from layouts/robots.txt (adds the Sitemap: line).
+enableRobotsTXT: true
+
+# import hextra as module
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+
+  # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - name: Blog
+      pageRef: /blog
+      weight: 1
+    - name: About
+      pageRef: /about
+      weight: 2
+    - name: Resume
+      pageRef: /resume
+      weight: 3
+    - name: Search
+      weight: 4
+      params:
+        type: search
+    - name: GitHub
+      weight: 5
+      url: 'https://github.com/sauravjalui'
+      params:
+        icon: github
+    - name: Theme
+      weight: 6
+      params:
+        type: theme-toggle
+
+# Google Analytics 4. Hextra emits this only on production builds --
+# components/analytics/analytics.html wraps it in hugo.IsProduction --
+# so `hugo server` locally will not pollute your stats.
+services:
+  googleAnalytics:
+    ID: G-9DCZNJXZKJ
+
+params:
+  # Site-wide fallback for og:image / twitter:image. Any page with its own
+  # `images:` front matter overrides this; everything else (home, about,
+  # resume, blog index, tag pages) falls back to the card below.
+  images:
+    - images/og-default.png
+
+  theme:
+    default: light
+    displayToggle: false
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/lotus.svg
+      dark: images/lotus.svg
+      width: 28
+      height: 28
+
+  footer:
+    displayCopyright: false
+    displayPoweredBy: true
+
+  editURL:
+    enable: true
+    base: 'https://github.com/sauravjalui/sauravjalui.github.io/edit/main/content'

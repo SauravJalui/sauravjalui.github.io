@@ -1,0 +1,5 @@
+{{/* Preload the two fonts used above the fold: body text and the H1.
+     Without these the heading paints in the fallback and reflows,
+     because @font-face only starts fetching once the CSS has parsed. */}}
+<link rel="preload" href="{{ "fonts/Inter-400.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/bricolage-grotesque.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
